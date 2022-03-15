@@ -18,16 +18,31 @@ const routes = [
   {
     path: '/user/:id',
     component: User,
+    props: true,
     children: [
       // 当 /user/:id 匹配成功
       // UserHome 将被渲染到 User 的 <router-view> 内部
-      {path: '', component: UserHome},
+      {
+        path: '',
+        component: UserHome
+      },
       // 当 /user/:id/profile 匹配成功
       // UserProfile 将被渲染到 User 的 <router-view> 内部
-      {path: 'profile', component: UserProfile},
+      {
+        path: 'profile',
+        component: UserProfile,
+        props: true
+      },
       // 当 /user/:id/posts 匹配成功
       // UserPosts 将被渲染到 User 的 <router-view> 内部
-      {path: 'posts', component: UserPosts}
+      {
+        path: 'posts',
+        components: {
+          default: UserPosts,
+          post2: UserPosts
+        },
+        props: true
+      }
     ]
   }
 ]
@@ -37,7 +52,7 @@ const routes = [
 // 暂时保持简单
 const router = VueRouter.createRouter({
   // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
-  history: VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHistory(),
   routes, // `routes: routes` 的缩写
 })
 

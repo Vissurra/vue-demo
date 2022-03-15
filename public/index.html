@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
 <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-        Please enable it to continue.</strong>
+  <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+    Please enable it to continue.</strong>
 </noscript>
 
 <div id="app">
-    <h1>Hello App!</h1>
-    <p>
-        <!--使用 router-link 组件进行导航 -->
-        <!--通过传递 `to` 来指定链接 -->
-        <!--`<router-link>` 将呈现一个带有正确 `href` 属性的 `<a>` 标签-->
-        <router-link to="/">Go to Home</router-link>
-        <br>
-        <router-link to="/app">Go to App</router-link>
-        <br>
-        <router-link to="/about">Go to About</router-link>
-        <br>
-        <router-link to="/user/1">Go to User1</router-link>
-        <br>
-        <router-link to="/user/2">Go to User2</router-link>
-    </p>
-    <!-- 路由出口 -->
-    <!-- 路由匹配到的组件将渲染在这里 -->
-    <router-view></router-view>
+  <h1>Hello App!</h1>
+  <p>
+    <!--使用 router-link 组件进行导航 -->
+    <!--通过传递 `to` 来指定链接 -->
+    <!--`<router-link>` 将呈现一个带有正确 `href` 属性的 `<a>` 标签-->
+    <router-link to="/">Go to Home</router-link>
+    <br>
+    <router-link to="/app">Go to App</router-link>
+    <br>
+    <router-link to="/about">Go to About</router-link>
+    <br>
+    <router-link to="/user/1">Go to User1</router-link>
+    <br>
+    <router-link to="/user/2">Go to User2</router-link>
+  </p>
+  <hr>
+  <!-- 路由出口 -->
+  <!-- 路由匹配到的组件将渲染在这里 -->
+  <router-view></router-view>
 </div>
 </body>
 </html>
