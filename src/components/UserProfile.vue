@@ -1,5 +1,5 @@
 <template>
-  <div>Profile {{ id }}</div>
+  <div>User id: {{ id }}</div>
 </template>
 
 <script>

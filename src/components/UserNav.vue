@@ -1,15 +1,33 @@
 <template>
-  <h3>User Nav</h3>
-  <router-link :to="'/user/' + $route.params.id">Go to User</router-link>
-  <br>
-  <router-link :to="'/user/' + $route.params.id + '/profile'">Go to profile {{ $route.params.id }}</router-link>
-  <br>
-  <router-link :to="'/user/' + $route.params.id + '/posts'">Go to posts {{ $route.params.id }}</router-link>
+  <el-row class="tac">
+    <el-col :span="12">
+      <el-menu default-active="1">
+        <el-menu-item index="1">
+          <el-icon>
+            <document/>
+          </el-icon>
+          <router-link :to="'/user/' + id + '/profile'">Profile</router-link>
+        </el-menu-item>
+        <el-menu-item index="2">
+          <el-icon>
+            <icon-menu/>
+          </el-icon>
+          <router-link :to="'/user/' + id + '/posts'">Posts</router-link>
+        </el-menu-item>
+      </el-menu>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
+import {Document, Menu as IconMenu} from "@element-plus/icons-vue";
+
 export default {
-  name: "UserNav"
+  name: "UserNav",
+  props: {
+    id: String
+  },
+  components: {Document, IconMenu},
 }
 </script>
 
