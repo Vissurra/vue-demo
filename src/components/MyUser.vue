@@ -12,8 +12,7 @@
 import UserNav from "@/components/UserNav";
 
 export default {
-  // eslint-disable-next-line
-  name: "User",
+  name: "MyUser",
   props: {
     id: String
   },

@@ -1,8 +1,10 @@
 import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
+import ElementPlus from 'element-plus'
+
 import App from './App.vue'
 import About from './About.vue'
-import User from './components/User.vue'
+import User from './components/MyUser.vue'
 import UserHome from './components/UserHome.vue'
 import UserProfile from './components/UserProfile.vue'
 import UserPosts from './components/UserPosts.vue'
@@ -13,7 +15,6 @@ import UserPosts from './components/UserPosts.vue'
 // 我们后面再讨论嵌套路由。
 const routes = [
   {path: '/', component: {template: '<h1>Home</h1>'}},
-  {path: '/app', component: App},
   {path: '/about', component: About},
   {
     path: '/user/:id',
@@ -57,11 +58,10 @@ const router = VueRouter.createRouter({
 })
 
 // 5. 创建并挂载根实例
-const app = Vue.createApp({})
+const app = Vue.createApp(App)
 //确保 _use_ 路由实例使
 //整个应用支持路由。
 app.use(router)
+app.use(ElementPlus, {size: 'small', zIndex: 3000})
 
 app.mount('#app')
-
-// 现在，应用已经启动了！
