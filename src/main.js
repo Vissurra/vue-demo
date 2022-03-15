@@ -7,6 +7,6 @@ import ElementPlus from 'element-plus'
 
 const app = Vue.createApp(App)
 app.use(router)
-app.use(ElementPlus, {size: 'normal', zIndex: 3000})
+app.use(ElementPlus, {size: 'large', zIndex: 3000})
 
 app.mount('#app')

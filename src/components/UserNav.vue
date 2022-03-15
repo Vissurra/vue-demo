@@ -1,6 +1,6 @@
 <template>
-  <el-row class="tac">
-    <el-col :span="12">
+  <el-row>
+    <el-col :span="14" :offset="4">
       <el-menu default-active="1">
         <el-menu-item index="1">
           <el-icon>
@@ -32,5 +32,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
