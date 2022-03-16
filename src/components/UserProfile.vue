@@ -1,11 +1,11 @@
 <template>
   <el-row>
-    <el-col :span="18">
+    <el-col :span="14">
       <h2>Profile</h2>
     </el-col>
   </el-row>
   <el-row>
-    <el-col :span="18">
+    <el-col :span="14">
       <el-divider/>
     </el-col>
   </el-row>
@@ -61,6 +61,6 @@ label {
 }
 
 .el-divider {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 </style>

@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'MyNav',
+  name: 'GlobalNav',
   data() {
     return {
       url: '../assets/logo.png',

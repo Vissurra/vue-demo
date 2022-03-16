@@ -1,35 +1,31 @@
+import Home from "@/views/Home";
 import About from "@/views/About";
-import MyUser from "@/views/MyUser";
+import User from "@/views/User";
 import UserProfile from "@/components/UserProfile";
 import UserPosts from "@/components/UserPosts";
 import * as VueRouter from "vue-router";
-import UserNav from "@/components/UserNav";
 
 const routes = [
   {
-    path: '/', component: {template: '<h1>Home</h1>'}
+    path: '/', component: Home
   },
   {
     path: '/about', component: About
   },
   {
     path: '/user/:id',
-    components: {
-      default: MyUser,
-      left: UserNav
-    },
+    component: User,
     props: true,
     children: [
       {
         path: 'profile',
         alias: [''],
+        props: true,
         component: UserProfile,
-        props: true
       },
       {
         path: 'posts',
         component: UserPosts,
-        props: true
       }
     ]
   }
