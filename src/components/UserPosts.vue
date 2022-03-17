@@ -1,16 +1,16 @@
 <template>
   <el-row>
-    <el-col :span="14">
+    <el-col :span="16">
       <h2>Posts</h2>
     </el-col>
   </el-row>
   <el-row>
-    <el-col :span="14">
+    <el-col :span="16">
       <el-divider/>
     </el-col>
   </el-row>
   <el-row class="item">
-    <el-col :span="12">
+    <el-col :span="16">
       <el-table :data="posts" stripe style="width: 100%">
         <el-table-column type="index" width="100"/>
         <el-table-column prop="title" label="Title" sortable width="180"/>
