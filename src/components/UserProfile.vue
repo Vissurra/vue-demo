@@ -30,9 +30,19 @@
   </el-row>
   <el-row class="item">
     <el-col>
-      <el-button type="success">Update</el-button>
+      <el-button type="success" @click="dialogVisible = true">Update</el-button>
     </el-col>
   </el-row>
+
+  <el-dialog v-model="dialogVisible" width="20%">
+    <span>Updating profile?</span>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="dialogVisible = false">Confirm</el-button>
+      </span>
+    </template>
+  </el-dialog>
 </template>
 
 <script>
@@ -43,6 +53,7 @@ export default {
   },
   data() {
     return {
+      dialogVisible: false,
       name: 'vissurra',
       desc: 'Something about you'
     }
@@ -62,5 +73,8 @@ label {
 
 .el-divider {
   margin-bottom: 30px;
+}
+.dialog-footer button:first-child {
+  margin-right: 10px;
 }
 </style>
