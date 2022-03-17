@@ -3,7 +3,7 @@
     <el-col :span="18" :offset="3">
       <el-container>
         <el-aside>
-          <UserNav></UserNav>
+          <UserNav :id="id"></UserNav>
         </el-aside>
         <el-main>
           <router-view></router-view>
@@ -18,6 +18,9 @@ import UserNav from "@/components/UserNav";
 
 export default {
   name: "UserView",
+  props: {
+    id: String
+  },
   components: {UserNav}
 }
 </script>
