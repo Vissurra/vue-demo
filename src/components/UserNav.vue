@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="14" :offset="4">
-      <el-menu default-active="/" router>
+      <el-menu :default-active="$route.path" router>
         <el-menu-item :index="'/user/' + id + '/profile'">
           <el-icon>
             <avatar/>

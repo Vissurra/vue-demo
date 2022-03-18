@@ -19,7 +19,6 @@ const routes = [
     children: [
       {
         path: 'profile',
-        alias: [''],
         props: true,
         component: UserProfile,
       },
