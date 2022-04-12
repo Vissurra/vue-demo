@@ -13,6 +13,7 @@
     </el-sub-menu>
     <el-menu-item index="/info" disabled>Info</el-menu-item>
     <el-menu-item index="/about">About</el-menu-item>
+    <el-menu-item index="/cube">Cube</el-menu-item>
   </el-menu>
 </template>
 

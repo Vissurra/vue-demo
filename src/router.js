@@ -4,6 +4,7 @@ import User from "@/views/User";
 import UserProfile from "@/components/UserProfile";
 import UserPosts from "@/components/UserPosts";
 import * as VueRouter from "vue-router";
+import RotateCube from "@/views/RotateCube";
 
 const routes = [
   {
@@ -27,6 +28,10 @@ const routes = [
         component: UserPosts,
       }
     ]
+  },
+  {
+    path: '/cube',
+    component: RotateCube
   }
 ]
 
